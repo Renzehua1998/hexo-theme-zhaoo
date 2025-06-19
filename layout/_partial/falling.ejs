@@ -1,0 +1,63 @@
+<script>
+  function loadScript(src, cb) {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var HEAD = document.getElementsByTagName("head")[0] || document.documentElement;
+        var script = document.createElement("script");
+        script.setAttribute("type", "text/javascript");
+        if (cb) {
+          if (JSON.stringify(cb)) {
+            for (let p in cb) {
+              if (p == "onload") {
+                script[p] = () => {
+                  cb[p]()
+                  resolve()
+                }
+              } else {
+                script[p] = cb[p]
+                script.onload = resolve
+              }
+            }
+          } else {
+            script.onload = () => {
+              cb()
+              resolve()
+            };
+          }
+        } else {
+          script.onload = resolve
+        }
+        script.setAttribute("src", src);
+        HEAD.appendChild(script);
+      });
+    });
+  }
+</script>
+
+<!-- 雪花和花瓣特效 -->
+<% if(theme.snow.on === true ) { %>
+  <% if(theme.snow.onlyPc === true ) { %>
+    <script defer type="text/javascript">
+      //只在桌面版网页启用特效
+      var windowWidth = $(window).width();
+      if (windowWidth > 768) {
+        loadScript('<%- url_for("/js/falling/snow.js") %>');
+      }
+    </script>
+  <% } else {  %>
+    <script defer src="<%- url_for('/js/falling/snow.js') %>"></script>
+  <% } %>
+<% }
+if(theme.sakura.on === true) { %>
+  <% if(theme.sakura.onlyPc === true ) { %>
+    <script defer type="text/javascript">
+      //只在桌面版网页启用特效
+      var windowWidth = $(window).width();
+      if (windowWidth > 768) {
+        loadScript('<%- url_for("/js/falling/sakura.js") %>');
+      }
+    </script>
+  <% } else { %>
+    <script defer src="<%- url_for('/js/falling/sakura.js') %>"></script>
+  <% } %>
+<% } %>
