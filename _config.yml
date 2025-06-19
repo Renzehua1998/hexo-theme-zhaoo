@@ -288,3 +288,13 @@ custom:
   foot:
   css:
   js:
+
+# 首页雪花飘落效果--冬天
+snow:
+  on: true
+  onlyPc: false # 设为true，只有pc端显示雪花特效
+
+# 首页花瓣飘落效果--春天
+sakura:
+  on: true
+  onlyPc: false # 设为true，只有pc端显示花瓣特效
