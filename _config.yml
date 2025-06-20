@@ -7,8 +7,8 @@ menu:
   home: / || 首页
   galleries: /lovetree/ || 爱情树
   archives: /archives/ || 归档
-  tags: /tags/ || 标签
   categories: /categories/ || 分类
+  message: /message/ || 留言板
   about: /about/ || 关于
 
 # Color
@@ -180,7 +180,7 @@ galleries:
 # --------------------------------------------------
 
 comments:
-  enable: false
+  enable: true
   type: valine # gitalk | valine | changyan
   button: true
 
@@ -194,10 +194,10 @@ gitalk:
 
 # Valine
 valine:
-  appId:
-  appKey:
-  placeholder: 雁过留痕
-  avatar: mp
+  appId: KH9Z3JOEQWfbQdJgYoXdkhHx-gzGzoHsz
+  appKey: JIMAwT52KSRkl8UziowaOBXe
+  placeholder: 请留下对我们的祝福
+  avatar: monsterid
   pageSize: 10
   lang: zh-CN
 

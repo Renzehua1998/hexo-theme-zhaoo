@@ -37,7 +37,7 @@
   </div>
   <div div class="preview-avatar-father">
     <div class="preview-avatar">
-      <div class="love-icon">
+      <div class="love-icon" id="heart-beat">
       </div>
     </div>
   </div>
@@ -47,6 +47,39 @@
   <div class="preview-scroll">
     <a href="#container" class="smooth-scroll"><i class="iconfont iconMouse"></i></a>
   </div>
+  <script>
+    // JavaScript代码
+    const heartBeatDiv = document.getElementById('heart-beat');
+    let scale = 1; // 初始缩放比例
+    let direction = 1; // 方向：1表示放大，-1表示缩小
+    const maxScale = 1.8; // 最大缩放比例
+    const minScale = 1; // 最小缩放比例
+    const speedBig = 0.01; // 变大速度
+    const speedSmall = 0.02; // 变小速度
+    
+
+    function animateHeartBeat() {
+      if (direction > 0) {
+        scale += direction * speedBig; // 根据方向调整缩放比例
+      } else {
+        scale += direction * speedSmall;
+      }
+      
+      heartBeatDiv.style.transform = `scale(${scale})`; // 动态更新CSS的transform属性
+
+      // 判断是否达到最大或最小缩放比例，改变方向
+      if (scale >= maxScale) {
+        direction = -1;
+      } else if (scale <= minScale) {
+        direction = 1;
+      }
+
+      requestAnimationFrame(animateHeartBeat); // 使用requestAnimationFrame实现循环动画
+    }
+
+    // 开始动画
+    animateHeartBeat();
+  </script>
   <script>
     function timer() {
         var start = new Date(2025, 4, 20); // 2015.7.2
