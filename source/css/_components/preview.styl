@@ -29,7 +29,7 @@
       color #ffffff
   .preview-image
     z-index 40
-    height 90vh
+    height 80vh
     width 100%
     background-image var(--background-image)
     background-repeat no-repeat
@@ -78,26 +78,26 @@
           animation-duration 20s
   .preview-motto-wrapper
     position absolute
-    top 42vh
+    top 5vh
     left 0
     z-index 50
     width 100%
-    text-align center
+    text-align right
     .preview-motto
       display inline
       text-align center
-      font-size 3.5em
+      font-size 1.2em
       font-family 'Quicksand', 'Vollkorn', serif
       font-weight 300
       color convert(hexo-config('preview.motto.color')) || #000000
       margin 0
     .preview-cursor
-      font-size 2.5em
+      font-size 1.2em
       color #ffffff
       animation blink 0.7s infinite
     .preview-motto, .preview-cursor
       @media (max-width 768px)
-        font-size 2em
+        font-size 1.2em
   .preview-scroll
     height 10vh
     display flex
@@ -105,3 +105,36 @@
     align-items center
     i
       font-size 32px
+  .preview-avatar-father
+    display flex
+    justify-content center
+  .preview-avatar
+    display flex
+    position absolute
+    top 15vh
+    z-index 50
+    width 772px
+    height 30%
+    background #cfcfcfa1
+    text-align center
+    justify-content center
+    align-items center
+    margin auto
+    border-radius 4rem
+  .preview-avatar
+      @media (max-width 768px)
+        width 90%
+    .love-icon
+      width 30%
+      height 30%
+      background-image var(--loveicon-image)
+      background-size unquote('100% 100%')
+  .timer
+    height 10vh
+    font-size 200%
+    line-height 1.5
+    display flex
+    justify-content center
+    margin auto
+  .timer b
+    color rgb(253, 99, 125)
