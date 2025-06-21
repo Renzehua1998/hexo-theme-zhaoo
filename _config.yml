@@ -30,11 +30,16 @@ color:
 
 # Favicon
 favicon:
-  small: /images/icons/favicon-16x16.png
-  medium: /images/icons/favicon-32x32.png
-  apple_touch_icon: /images/icons/apple-touch-icon.png
-  safari_pinned_tab: /images/icons/stun-logo.svg
-  msapplication: /images/icons/favicon-144x144.png
+  # small: /images/icons/favicon-16x16.png
+  # medium: /images/icons/favicon-32x32.png
+  # apple_touch_icon: /images/icons/apple-touch-icon.png
+  # safari_pinned_tab: /images/icons/stun-logo.svg
+  # msapplication: /images/icons/favicon-144x144.png
+  small: /images/icons/favicon.ico
+  medium: /images/icons/favicon.ico
+  apple_touch_icon: /images/icons/favicon.ico
+  safari_pinned_tab: /images/icons/favicon.ico
+  msapplication: /images/icons/favicon.ico
 
 # Font
 font:
@@ -63,11 +68,11 @@ preview:
     size: cover # css: background-size
     position: center # css: background-position
   motto:
-    default: 我在开了灯的床头下，想问问自己的心啊。
+    default: 我见众生皆草木，唯有见你是青山。
     color: '#ffffff'
     typing: true
-    api: https://v2.jinrishici.com/one.json
-    data_contents: ['data', 'content']
+    api: http://res.abeim.cn/api-text_sweet
+    data_contents: ['content']
     # ex.one  =>  apl: https://v1.hitokoto.cn/?encode=text&c=i  data_contents:
     # ex.two  =>  api: https://v2.jinrishici.com/one.json  data_contents: ['data', 'content']
 
@@ -80,12 +85,12 @@ navbar:
 copyright: <p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p>
 
 # Social
-social:
-  qq: tencent://message/?Menu=yes&uin=894519210 || iconQQ || '#12B7F5'
-  wechat: javascript:; || iconwechat-fill || '#09BB07'
-  instagram: https://www.instagram.com/izhaoo/ || iconinstagram || '#DA2E76'
-  github: https://github.com/zhaoo || icongithub-fill || '#9f7be1'
-  email: mailto:izhaoo@163.com || iconmail
+# social:
+#   qq: tencent://message/?Menu=yes&uin=894519210 || iconQQ || '#12B7F5'
+#   wechat: javascript:; || iconwechat-fill || '#09BB07'
+#   instagram: https://www.instagram.com/izhaoo/ || iconinstagram || '#DA2E76'
+#   github: https://github.com/zhaoo || icongithub-fill || '#9f7be1'
+#   email: mailto:izhaoo@163.com || iconmail
 
 # Override Scrollbar
 scrollbar:
@@ -149,7 +154,7 @@ toc:
 
 # Donate
 donate:
-  enable: true
+  enable: false
   alipay: https://pic.izhaoo.com/alipay.jpg
   wechat: https://pic.izhaoo.com/wechat.jpg
 
@@ -182,7 +187,7 @@ galleries:
 comments:
   enable: true
   type: valine # gitalk | valine | changyan
-  button: true
+  button: false
 
 # Gitalk
 gitalk:

@@ -10,6 +10,9 @@
     opacity 0
   100%
     opacity 1
+@keyframes jianbian 
+  to 
+    background-position -2000rem
 .preview
   .navbar
     position absolute
@@ -29,7 +32,7 @@
       color #ffffff
   .preview-image
     z-index 40
-    height 80vh
+    height 76vh
     width 100%
     background-image var(--background-image)
     background-repeat no-repeat
@@ -130,7 +133,7 @@
       background-image var(--loveicon-image)
       background-size unquote('100% 100%')
   .timer
-    height 10vh
+    height 7vh
     font-size 200%
     line-height 1.5
     display flex
@@ -141,3 +144,16 @@
       font-size 160%
   .timer b
     color rgb(253, 99, 125)
+  .together
+    height 7vh
+    display flex
+    justify-content center
+    margin auto
+    font-size 200%
+    line-height 1.5
+    background-image linear-gradient(270deg, #ff4500, #ffa500, #ffd700, #90ee90, #00ffff, #1e90ff, #9370db, #ff69b4, #ff4500)
+    -webkit-background-clip text
+    color #0000
+    animation jianbian 60s linear infinite
+    font-family 'Noto Serif SC', serif
+    font-weight 700px
